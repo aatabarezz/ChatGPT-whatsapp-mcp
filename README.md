@@ -33,8 +33,8 @@ The tested path is macOS on Apple Silicon, Python 3.11, a Go toolchain compatibl
 Install Git, Go, a C compiler for SQLite/CGO, and [uv](https://docs.astral.sh/uv/). On macOS, Xcode Command Line Tools supply the compiler. FFmpeg is optional for voice-message conversion.
 
 ```bash
-git clone https://github.com/aatabarezz/whatsapp-mcp.git
-cd whatsapp-mcp
+git clone https://github.com/aatabarezz/ChatGPT-whatsapp-mcp.git
+cd ChatGPT-whatsapp-mcp
 uv sync --project whatsapp-mcp-server --locked
 ```
 
