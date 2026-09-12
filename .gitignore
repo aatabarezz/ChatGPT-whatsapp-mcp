@@ -1,0 +1,17 @@
+# WhatsApp sessions, message history, downloaded attachments
+whatsapp-bridge/store/
+*.db
+*.db-*
+*.sqlite*
+# Credentials and local configuration
+.env*
+!.env.example
+*runtime-key*
+claude_desktop_config.json
+# Installed runtimes and generated files
+bin/tunnel-runtime/
+.venv/
+__pycache__/
+*.py[cod]
+*.log
+.DS_Store

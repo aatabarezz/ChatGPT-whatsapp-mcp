@@ -1,4 +1,7 @@
 #!/bin/bash
-export PATH="/opt/homebrew/bin:$PATH"
-cd /Users/altanatabarut/whatsapp-mcp/whatsapp-bridge
-exec /opt/homebrew/bin/go run main.go >> /tmp/whatsapp-mcp.log 2>&1
+set -euo pipefail
+umask 077
+export PATH="/opt/homebrew/bin:/usr/local/bin:$PATH"
+root="$(cd "$(dirname "$0")/.." && pwd)"
+cd "$root/whatsapp-bridge"
+exec go run .

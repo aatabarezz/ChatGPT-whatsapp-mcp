@@ -703,7 +703,7 @@ func startRESTServer(client *whatsmeow.Client, messageStore *MessageStore, port 
 			return
 		}
 
-		fmt.Println("Received request to send message", req.Message, req.MediaPath)
+		fmt.Println("Received request to send message")
 
 		// Send the message
 		success, message := sendWhatsAppMessage(client, req.Recipient, req.Message, req.MediaPath)
@@ -775,7 +775,7 @@ func startRESTServer(client *whatsmeow.Client, messageStore *MessageStore, port 
 	})
 
 	// Start the server
-	serverAddr := fmt.Sprintf(":%d", port)
+	serverAddr := fmt.Sprintf("127.0.0.1:%d", port)
 	fmt.Printf("Starting REST API server on %s...\n", serverAddr)
 
 	// Run server in a goroutine so it doesn't block
